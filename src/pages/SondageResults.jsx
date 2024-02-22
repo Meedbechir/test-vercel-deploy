@@ -24,6 +24,7 @@ const SondageResults = () => {
         );
 
         setResults(response.data);
+        console.log(response.data)
       } catch (error) {
         console.error("Ereur:", error);
       }
@@ -100,4 +101,4 @@ const SondageResults = () => {
   );
 };
 
-export default SondageResults;
+export default SondageResults; 
