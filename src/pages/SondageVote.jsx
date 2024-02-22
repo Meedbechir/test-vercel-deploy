@@ -71,7 +71,7 @@ const SondageVote = () => {
   const { question, options } = sondageDetails;
 
   return (
-    <div className="text-center mt-40">
+    <div className="text-center mt-40 font-sans">
       <h1 className="text-3xl font-bold mb-4">{question}</h1>
       <ul className="list-none">
         {options.map((option, index) => (
