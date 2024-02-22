@@ -19,11 +19,10 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
+      localStorage.removeItem("LienSondage");
+      localStorage.removeItem("user");
+      localStorage.removeItem("sondageId");
 
-      localStorage.removeItem('LienSondage');
-      localStorage.removeItem('user');
-      localStorage.removeItem('sondageId');
-      
       dispatch(logout());
       toast.success("Vous n'êtes plus connecté !");
     } catch (error) {
@@ -37,10 +36,10 @@ const Navbar = () => {
   return (
     <>
       <Toaster position="top-left" />
-      <nav className="bg-white p-4 flex items-center justify-between fixed top-0 w-full z-50">
+      <nav className="bg-white p-4 flex items-center justify-between fixed top-0 font-sans w-full z-50">
         <div>
           <NavLink to="/" onClick={closeMenu}>
-            <p className="text-gray-800 text-2xl font-bold">Pulso</p>
+            <p className="text-gray-600 text-2xl font-bold">Pulso</p>
           </NavLink>
         </div>
         <div className="hidden md:flex items-center space-x-4">
@@ -86,7 +85,7 @@ const Navbar = () => {
             </>
           )}
           <NavLink to="/forms" onClick={closeMenu}>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+            <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-md font-bold">
               Créer un formulaire
             </button>
           </NavLink>
@@ -142,7 +141,7 @@ const Navbar = () => {
                 </>
               )}
               <NavLink to="/forms" onClick={closeMenu}>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded w-full focus:outline-none focus:bg-blue-600">
+                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded-md w-full focus:outline-none focus:bg-blue-600 font-bold">
                   Créer un formulaire
                 </button>
               </NavLink>

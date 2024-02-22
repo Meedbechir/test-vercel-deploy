@@ -104,7 +104,7 @@ const Sondages = () => {
   // };
 
   return (
-    <div className="flex flex-col items-center justify-center font-sans h-screen">
+    <div className="mt-40 text-center font-sans">
       {(!token || sondage.length === 0) && (
         <div className="text-center text-gray-400 text-2xl font-bold">
           {token
@@ -112,7 +112,7 @@ const Sondages = () => {
             : "Veuillez vous connecter pour voir vos sondages existants."}
         </div>
       )}
-      <div className=" flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-4">
         {sondage.length === 1 ? (
           <div
             key={sondage[0].id}

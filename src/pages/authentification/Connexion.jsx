@@ -37,7 +37,6 @@ const Connexion = () => {
 
       localStorage.setItem("user", JSON.stringify(response.user_id));
 
-
       setFormData({
         email: "",
         password: "",
@@ -57,10 +56,10 @@ const Connexion = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="mt-40 font-sans">
       <Toaster position="top-left" />
       <div className="max-w-md mx-auto mt-6 p-6 bg-white shadow-lg rounded-md mb-5">
-        <h2 className="text-gray-800 text-3xl mb-6 font-bold text-center">
+        <h2 className="text-gray-500 text-3xl mb-6 font-bold text-center">
           Pulso
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -90,7 +89,7 @@ const Connexion = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 mt-4 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+            className="w-full font-bold bg-blue-500 text-white py-1 mt-4 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
             disabled={loading}
           >
             {loading ? "Connexion en cours..." : "Se connecter"}
